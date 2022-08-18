@@ -20,15 +20,15 @@ public class TakeScreenshoTest {
 				"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.facebook.com");
-
 		Thread.sleep(2000);
+		//find element
 		driver.findElement(By.id("email")).sendKeys("Raji");
-
+		//take screenshot
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-		
-		File destFile = new File("./Screenshot/" + "fb"+".png");
+		File destFile = new File("./Screenshot/" + "az" + ".png");
 		FileHandler.copy(srcFile, destFile);
+		//navigates
 		driver.navigate().to("http://www.amazon.com");
 		Thread.sleep(3000);
 		driver.navigate().back();

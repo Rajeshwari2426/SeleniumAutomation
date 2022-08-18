@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.TakeScreenshot">
+      <class name="com.CQA.SeleniumAutomation.TakeScreenshoTest">
         <methods>
           <include name="takeScreenShotTest"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.TakeScreenshot -->
+      </class> <!-- com.CQA.SeleniumAutomation.TakeScreenshoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

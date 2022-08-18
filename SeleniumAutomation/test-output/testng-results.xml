@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-18T08:03:09 IST" name="Default suite" finished-at="2022-08-18T08:05:38 IST" duration-ms="148738">
+  <suite started-at="2022-08-18T13:53:57 IST" name="Default suite" finished-at="2022-08-18T13:55:10 IST" duration-ms="72806">
     <groups>
     </groups>
-    <test started-at="2022-08-18T08:03:09 IST" name="Default test" finished-at="2022-08-18T08:05:38 IST" duration-ms="148738">
-      <class name="com.CQA.SeleniumAutomation.Keyboard_Mouse_Operations_Test">
-        <test-method signature="keyboardMouseOperationstest()[pri:0, instance:com.CQA.SeleniumAutomation.Keyboard_Mouse_Operations_Test@1ffaf86]" started-at="2022-08-18T08:03:09 IST" name="keyboardMouseOperationstest" finished-at="2022-08-18T08:05:38 IST" duration-ms="148482" status="PASS">
+    <test started-at="2022-08-18T13:53:57 IST" name="Default test" finished-at="2022-08-18T13:55:10 IST" duration-ms="72806">
+      <class name="com.CQA.SeleniumAutomation.TakeScreenshoTest">
+        <test-method signature="takeScreenShotTest()[pri:0, instance:com.CQA.SeleniumAutomation.TakeScreenshoTest@1ffaf86]" started-at="2022-08-18T13:53:57 IST" name="takeScreenShotTest" finished-at="2022-08-18T13:55:10 IST" duration-ms="72724" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- keyboardMouseOperationstest -->
-      </class> <!-- com.CQA.SeleniumAutomation.Keyboard_Mouse_Operations_Test -->
+        </test-method> <!-- takeScreenShotTest -->
+      </class> <!-- com.CQA.SeleniumAutomation.TakeScreenshoTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
