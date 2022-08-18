@@ -8,11 +8,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.Test;
 
 import com.google.common.io.Files;
 
-public class TakeScreenshot {
+public class TakeScreenshoTest {
 	@Test
 	public void takeScreenShotTest() throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver",
@@ -26,8 +27,16 @@ public class TakeScreenshot {
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
 		
-		File destFile = new File(".//Eclipse png//" + ".png");
-		Files.copy(srcFile, destFile);
+		File destFile = new File("./Screenshot/" + "fb"+".png");
+		FileHandler.copy(srcFile, destFile);
+		driver.navigate().to("http://www.amazon.com");
+		Thread.sleep(3000);
+		driver.navigate().back();
+		Thread.sleep(3000);
+		driver.navigate().forward();
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		Thread.sleep(3000);
 		driver.close();
 
 	}
