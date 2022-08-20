@@ -16,7 +16,7 @@ public class FB_AutomationTest {
 	}
 	
 	@Test
-	public void fbAutomationTest() throws InterruptedException
+	public void logininTest() throws InterruptedException
 	{					
 		driver.findElement(By.name("email")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("Raji");
@@ -28,15 +28,18 @@ public class FB_AutomationTest {
 	public void signupPageTest() throws InterruptedException
 	{
 		driver.findElement(By.linkText("Create New Account")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.name("firstname")).sendKeys("Raji");
-		
+		Thread.sleep(5000);
+		driver.findElement(By.name("firstname")).sendKeys("Raji");		
 		driver.findElement(By.name("lastname")).sendKeys("gandi");
 		driver.findElement(By.name("reg_email__")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.name("reg_passwd__")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.name("birthday_day")).sendKeys("26");
-		driver.findElement(By.name("reg_email__")).sendKeys("Raji@gmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.name("birthday_month")).sendKeys("3");
+		driver.findElement(By.id("year")).sendKeys("1997");
+		driver.findElement(By.name("sex")).click();
+		
 	}
 	
 }

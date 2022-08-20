@@ -5,6 +5,7 @@
     <classes>
       <class name="com.CQA.SeleniumAutomation.FB_AutomationTest">
         <methods>
+          <include name="launchBrowser"/>
           <include name="signupPageTest"/>
         </methods>
       </class> <!-- com.CQA.SeleniumAutomation.FB_AutomationTest -->
