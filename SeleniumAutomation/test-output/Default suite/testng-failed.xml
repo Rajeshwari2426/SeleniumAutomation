@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.LaunchBrowserTest">
+      <class name="com.CQA.SeleniumAutomation.FB_AutomationTest">
         <methods>
           <include name="launchBrowser"/>
+          <include name="signupPageTest"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.LaunchBrowserTest -->
+      </class> <!-- com.CQA.SeleniumAutomation.FB_AutomationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
