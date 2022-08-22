@@ -31,14 +31,17 @@ public class FB_AutomationTest {
 		Thread.sleep(5000);
 		driver.findElement(By.name("firstname")).sendKeys("Raji");		
 		driver.findElement(By.name("lastname")).sendKeys("gandi");
-		driver.findElement(By.name("reg_email__")).sendKeys("Raji@gmail.com");
-		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("Raji@gmail.com");
+		driver.findElement(By.name("reg_email__")).sendKeys("Rajibr2426@gmail.com");
+		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("Rajibr2426@gmail.com");
 		driver.findElement(By.name("reg_passwd__")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.name("birthday_day")).sendKeys("26");
 		Thread.sleep(2000);
-		driver.findElement(By.name("birthday_month")).sendKeys("3");
+		driver.findElement(By.name("birthday_month")).sendKeys("Feb");
 		driver.findElement(By.id("year")).sendKeys("1997");
-		driver.findElement(By.name("sex")).click();
+		driver.findElements(By.name("sex")).get(0).click();
+		driver.findElement(By.name("websubmit")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("jsc_c_5")).sendKeys("88299");//driver.findElement(By.name("login")).click();
 		
 	}
 	
