@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-22T12:27:52 IST" name="Default suite" finished-at="2022-08-22T12:28:27 IST" duration-ms="35065">
+  <suite started-at="2022-08-23T12:39:56 IST" name="Default suite" finished-at="2022-08-23T12:40:20 IST" duration-ms="23882">
     <groups>
     </groups>
-    <test started-at="2022-08-22T12:27:52 IST" name="Default test" finished-at="2022-08-22T12:28:27 IST" duration-ms="35065">
+    <test started-at="2022-08-23T12:39:56 IST" name="Default test" finished-at="2022-08-23T12:40:20 IST" duration-ms="23882">
       <class name="com.CQA.SeleniumAutomation.FB_AutomationTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.CQA.SeleniumAutomation.FB_AutomationTest@cb0755b]" started-at="2022-08-22T12:27:52 IST" name="launchBrowser" finished-at="2022-08-22T12:28:16 IST" duration-ms="23690" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.CQA.SeleniumAutomation.FB_AutomationTest@33065d67]" started-at="2022-08-23T12:39:56 IST" name="launchBrowser" finished-at="2022-08-23T12:40:07 IST" duration-ms="11491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="signupPageTest()[pri:0, instance:com.CQA.SeleniumAutomation.FB_AutomationTest@cb0755b]" started-at="2022-08-22T12:28:16 IST" name="signupPageTest" finished-at="2022-08-22T12:28:27 IST" duration-ms="11304" status="PASS">
+        <test-method signature="signupWithXpathTest()[pri:0, instance:com.CQA.SeleniumAutomation.FB_AutomationTest@33065d67]" started-at="2022-08-23T12:40:07 IST" name="signupWithXpathTest" finished-at="2022-08-23T12:40:20 IST" duration-ms="12223" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signupPageTest -->
+        </test-method> <!-- signupWithXpathTest -->
       </class> <!-- com.CQA.SeleniumAutomation.FB_AutomationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
