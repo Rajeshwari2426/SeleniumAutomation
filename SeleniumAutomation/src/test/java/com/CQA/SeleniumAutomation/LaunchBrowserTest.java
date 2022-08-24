@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class LaunchBrowserTest {
@@ -13,7 +14,7 @@ public class LaunchBrowserTest {
 	@Test
 	public void launchBrowser() throws InterruptedException {
 		Scanner sc = new Scanner(System.in); // System.in is a standard input stream
-		System.out.print("Select a browser:1.Chrome 2.Egde ");
+		System.out.print("Select a browser:1.Chrome 2.Egde 3.firefox");
 		String str = sc.nextLine(); // reads string
 		System.out.print("You have entered: " + str);
 
@@ -29,6 +30,12 @@ public class LaunchBrowserTest {
 			driver = new EdgeDriver();
 
 			break;
+		case "3":
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
+			break;
+			
 		}
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();

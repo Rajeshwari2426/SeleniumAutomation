@@ -6,7 +6,7 @@
       <class name="com.CQA.SeleniumAutomation.FB_AutomationTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="signupWithXpathTest"/>
+          <include name="signupWithXpathfunctionsTest"/>
         </methods>
       </class> <!-- com.CQA.SeleniumAutomation.FB_AutomationTest -->
     </classes>
