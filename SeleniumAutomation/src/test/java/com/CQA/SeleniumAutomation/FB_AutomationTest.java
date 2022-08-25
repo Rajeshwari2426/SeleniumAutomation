@@ -20,7 +20,7 @@ public class FB_AutomationTest {
 	}
 
 	@Test
-	public void logininTest() throws InterruptedException {
+	public void loginTest() throws InterruptedException {
 		driver.findElement(By.name("email")).sendKeys("8790142483");
 		driver.findElement(By.id("pass")).sendKeys("xyz");
 		Thread.sleep(2000);
@@ -67,15 +67,14 @@ public class FB_AutomationTest {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//select[@name='birthday_month']")).sendKeys("Feb");
 		driver.findElement(By.xpath("//select[@id='year']")).sendKeys("1997");
-		driver.findElements(By.xpath("//input[@name='sex']")).get(0).click();
-		
+		driver.findElements(By.xpath("//input[@name='sex']")).get(0).click();		
 		driver.findElement(By.xpath("//button[@name='websubmit']")).click();
 		Thread.sleep(7000);
 		driver.close();
 
 	}
 	@Test
-	public void logininTestXpath() throws InterruptedException {
+	public void loginTestXpath() throws InterruptedException {
 		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("8790142483");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("xyz123456");
 		Thread.sleep(2000);
@@ -106,6 +105,7 @@ public class FB_AutomationTest {
 		driver.findElement(By.xpath("//input[contains(@name,'reg_passwd__')]")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.xpath("//select[@name='birthday_day']")).sendKeys("26");
 		driver.findElement(By.xpath("//option[contains(text(),'Feb')]")).click();
+		Thread.sleep(3000);
 		driver.close();}
 
 }
