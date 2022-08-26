@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.XPathAxes">
+      <class name="com.CQA.SeleniumAutomation.WebElementInterfaceMethods">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="xpathUsingAxes"/>
+          <include name="webElementInterfaceMethods"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.XPathAxes -->
+      </class> <!-- com.CQA.SeleniumAutomation.WebElementInterfaceMethods -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
