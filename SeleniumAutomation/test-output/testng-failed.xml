@@ -5,7 +5,8 @@
     <classes>
       <class name="com.CQA.SeleniumAutomation.WebElementInterfaceMethods">
         <methods>
-          <include name="webElementInterfaceMethods"/>
+          <include name="launchBrowser"/>
+          <include name="PrintTooltip_Actitime_RememberCheckbox"/>
         </methods>
       </class> <!-- com.CQA.SeleniumAutomation.WebElementInterfaceMethods -->
     </classes>
