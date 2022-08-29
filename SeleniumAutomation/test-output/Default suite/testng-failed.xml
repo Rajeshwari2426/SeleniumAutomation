@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.WebElementInterfaceMethods">
+      <class name="com.CQA.SeleniumAutomation.JavaExecutor">
         <methods>
+          <include name="NavigatetoBottomofthePage"/>
           <include name="launchBrowser"/>
-          <include name="PrintTooltip_Actitime_RememberCheckbox"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.WebElementInterfaceMethods -->
+      </class> <!-- com.CQA.SeleniumAutomation.JavaExecutor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

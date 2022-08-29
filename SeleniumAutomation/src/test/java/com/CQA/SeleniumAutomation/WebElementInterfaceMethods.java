@@ -123,23 +123,18 @@ public class WebElementInterfaceMethods {
 		driver.close();
 	}
 	@Test
-	public void PrintTooltip_Actitime_RememberCheckbox() throws InterruptedException {
-		
-		
+	public void PrintTooltip_Actitime_RememberCheckbox() throws InterruptedException {		
 		driver.get("https://demo.actitime.com/login.do");
-//		driver.findElement(By.name("identifier")).sendKeys("rajarajeshwaribrgandi@gmail.com");
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//span[text()='Next']")).click();
-//		//find the Keep me Logged in Checkbox
-//		WebElement Checkbox = driver.findElement(By.id("selectioni8"));
-//		//get the tooltip text using getAttribute() method and store in a variable
-//		String tooltipText = Checkbox.getAttribute("jsname");
-//		System.out.println(tooltipText);
-		Thread.sleep(2000);
 		WebElement Checkbox = driver.findElement(By.id("keepLoggedInCheckBox"));		
-		String tooltipText = Checkbox.getAttribute("title");
-		Thread.sleep(2000);
+		String tooltipText = Checkbox.getAttribute("title");		
 		System.out.println(tooltipText);
+		Checkbox.click();
+		if (Checkbox.isSelected()) {
+			System.out.println("Checkbox is selected");
+			}else{
+			System.out.println("Checkbox is NOT selected");
+			}
+		
 		Thread.sleep(2000);
 		driver.close();
 
