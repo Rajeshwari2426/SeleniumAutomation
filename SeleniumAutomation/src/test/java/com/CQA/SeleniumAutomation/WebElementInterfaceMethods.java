@@ -6,6 +6,7 @@ import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.Color;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -58,6 +59,21 @@ public class WebElementInterfaceMethods {
 
 		// submit method
 		driver.findElement(By.name("login")).submit();
+		WebElement errMsg = 
+				 driver.findElement(By.className("_9ay7")); 
+				// get the text of the error message
+				String errtext = errMsg.getText();
+				//print the error message
+				System.out.println("error message is :"+errtext);
+				String c = errMsg.getCssValue("color");
+				//convert the color from string type to hexa form
+				String ColorasHex = Color.fromString(c).asHex();
+				System.out.println("hexadecimal format : "+ColorasHex);
+				if(ColorasHex.equals("#ce0100"))
+				System.out.println("Error message is in red color");
+				else{
+				System.out.println("Error message is in red color");
+				}
 		Thread.sleep(5000);
 		driver.close();
 
@@ -129,6 +145,7 @@ public class WebElementInterfaceMethods {
 		String tooltipText = Checkbox.getAttribute("title");		
 		System.out.println(tooltipText);
 		Checkbox.click();
+		//is selected method
 		if (Checkbox.isSelected()) {
 			System.out.println("Checkbox is selected");
 			}else{

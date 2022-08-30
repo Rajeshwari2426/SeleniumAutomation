@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.JavaExecutor">
+      <class name="com.CQA.SeleniumAutomation.HandlingFrames">
         <methods>
-          <include name="NavigatetoBottomofthePage"/>
+          <include name="DragAndDropbyOffset_Example"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.JavaExecutor -->
+      </class> <!-- com.CQA.SeleniumAutomation.HandlingFrames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
