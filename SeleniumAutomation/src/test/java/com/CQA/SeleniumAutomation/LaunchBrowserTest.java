@@ -48,7 +48,7 @@ public class LaunchBrowserTest {
 		
 		String pageSource = driver.getPageSource();
 		System.out.println("Source code:" + pageSource);
-		Thread.sleep(2000);
+		
 		driver.close();
 	}
 

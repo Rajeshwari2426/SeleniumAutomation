@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -21,6 +22,7 @@ public class FB_AutomationTest {
 
 	@Test
 	public void loginTest() throws InterruptedException {
+		
 		driver.findElement(By.name("email")).sendKeys("8790142483");
 		driver.findElement(By.id("pass")).sendKeys("xyz");
 		Thread.sleep(2000);

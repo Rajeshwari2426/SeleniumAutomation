@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -69,7 +70,7 @@ public class HandlingFrames {
 	@Test
 	public void gmail_contextClickDemo_mailArchive ()throws InterruptedException {
 		
-		driver.get("https://www.gmail.com");
+		driver.get("https://accounts.google.com/signin/v2/challenge/pwd?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward&TL=AKqFyY_toPfcu-rkPQSXDiKxaSX-fE6UTlnXq1jrl3-sWNUtfqDLa1uMmBy4pjov");
 		//enter email id
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("rajibr2426@gmail.com");
 		//click on Next button
