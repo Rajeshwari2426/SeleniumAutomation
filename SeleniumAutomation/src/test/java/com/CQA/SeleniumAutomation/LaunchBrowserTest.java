@@ -1,6 +1,7 @@
 package com.CQA.SeleniumAutomation;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,6 +24,8 @@ public class LaunchBrowserTest {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			
 			break;
 		case "2":
 			System.setProperty("webdriver.edge.driver",
@@ -39,13 +42,10 @@ public class LaunchBrowserTest {
 		}
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
+		
 		String title = driver.getTitle();
 		System.out.println("tITLE:" + title);
-		Thread.sleep(2000);
-		String currentUrl = driver.getCurrentUrl();
-		System.out.println("URL:" + currentUrl);
-		Thread.sleep(2000);
+		
 		String pageSource = driver.getPageSource();
 		System.out.println("Source code:" + pageSource);
 		Thread.sleep(2000);
