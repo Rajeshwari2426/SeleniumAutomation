@@ -24,7 +24,7 @@ public class LaunchBrowserTest {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			
 			
 			break;
 		case "2":
@@ -40,6 +40,7 @@ public class LaunchBrowserTest {
 			break;
 			
 		}
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
 		
