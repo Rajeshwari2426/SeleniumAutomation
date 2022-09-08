@@ -59,21 +59,20 @@ public class WebElementInterfaceMethods {
 
 		// submit method
 		driver.findElement(By.name("login")).submit();
-		WebElement errMsg = 
-				 driver.findElement(By.className("_9ay7")); 
-				// get the text of the error message
-				String errtext = errMsg.getText();
-				//print the error message
-				System.out.println("error message is :"+errtext);
-				String c = errMsg.getCssValue("color");
-				//convert the color from string type to hexa form
-				String ColorasHex = Color.fromString(c).asHex();
-				System.out.println("hexadecimal format : "+ColorasHex);
-				if(ColorasHex.equals("#ce0100"))
-				System.out.println("Error message is in red color");
-				else{
-				System.out.println("Error message is in red color");
-				}
+		WebElement errMsg = driver.findElement(By.className("_9ay7"));
+		// get the text of the error message
+		String errtext = errMsg.getText();
+		// print the error message
+		System.out.println("error message is :" + errtext);
+		String c = errMsg.getCssValue("color");
+		// convert the color from string type to hexa form
+		String ColorasHex = Color.fromString(c).asHex();
+		System.out.println("hexadecimal format : " + ColorasHex);
+		if (ColorasHex.equals("#ce0100"))
+			System.out.println("Error message is in red color");
+		else {
+			System.out.println("Error message is in red color");
+		}
 		Thread.sleep(5000);
 		driver.close();
 
@@ -138,20 +137,21 @@ public class WebElementInterfaceMethods {
 		Thread.sleep(2000);
 		driver.close();
 	}
+
 	@Test
-	public void PrintTooltip_Actitime_RememberCheckbox() throws InterruptedException {		
+	public void PrintTooltip_Actitime_RememberCheckbox() throws InterruptedException {
 		driver.get("https://demo.actitime.com/login.do");
-		WebElement Checkbox = driver.findElement(By.id("keepLoggedInCheckBox"));		
-		String tooltipText = Checkbox.getAttribute("title");		
+		WebElement Checkbox = driver.findElement(By.id("keepLoggedInCheckBox"));
+		String tooltipText = Checkbox.getAttribute("title");
 		System.out.println(tooltipText);
 		Checkbox.click();
-		//is selected method
+		// is selected method
 		if (Checkbox.isSelected()) {
 			System.out.println("Checkbox is selected");
-			}else{
+		} else {
 			System.out.println("Checkbox is NOT selected");
-			}
-		
+		}
+
 		Thread.sleep(2000);
 		driver.close();
 

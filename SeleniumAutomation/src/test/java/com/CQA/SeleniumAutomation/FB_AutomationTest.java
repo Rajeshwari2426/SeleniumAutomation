@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -44,8 +45,11 @@ public class FB_AutomationTest {
 		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("Rajibr2426@gmail.com");
 		driver.findElement(By.name("reg_passwd__")).sendKeys("Raji@gmail.com");
 		driver.findElement(By.name("birthday_day")).sendKeys("26");
+		
 		Thread.sleep(2000);
-		driver.findElement(By.name("birthday_month")).sendKeys("Feb");
+		WebElement monthDrop=driver.findElement(By.name("birthday_month"));
+		Select day=new Select(monthDrop);
+		day.selectByIndex(2);
 		driver.findElement(By.id("year")).sendKeys("1997");
 		driver.findElements(By.name("sex")).get(0).click();
 		driver.findElement(By.name("websubmit")).click();
@@ -108,6 +112,8 @@ public class FB_AutomationTest {
 		driver.findElement(By.xpath("//select[@name='birthday_day']")).sendKeys("26");
 		driver.findElement(By.xpath("//option[contains(text(),'Feb')]")).click();
 		Thread.sleep(3000);
-		driver.close();}
+		driver.close();
+		}
+	
 
 }
