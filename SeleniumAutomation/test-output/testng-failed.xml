@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.ListBoxTest">
+      <class name="com.CQA.SeleniumAutomation.PopupHandling">
         <methods>
-          <include name="hashMapExample_printtheOcuuranceOfPoori"/>
           <include name="launchBrowser"/>
+          <include name="windowPopup_Example"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.ListBoxTest -->
+      </class> <!-- com.CQA.SeleniumAutomation.PopupHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

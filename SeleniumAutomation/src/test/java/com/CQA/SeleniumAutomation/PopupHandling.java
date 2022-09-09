@@ -1,6 +1,8 @@
 package com.CQA.SeleniumAutomation;
 
 import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Set;
@@ -266,5 +268,22 @@ public class PopupHandling {
 		// closing the parent window
 		driver.close();
 	}
+	@Test
+	
+	public void windowPopup_Example() throws InterruptedException, AWTException, IOException {
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		driver.get("https://demo.actitime.com/login.do");
+		Thread.sleep(3000);		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_P);
+		r.keyRelease(KeyEvent.VK_P);
+		r.keyRelease(KeyEvent.VK_CONTROL);
+		Runtime run = Runtime.getRuntime();
+		run.exec("C:\\\\Users\\\\rajar\\\\Documents\\\\CQA1.exe");
+		Thread.sleep(5000);
+		driver.close();
+		}
+
 
 }

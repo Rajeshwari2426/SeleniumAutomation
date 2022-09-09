@@ -215,8 +215,7 @@ public class ListBoxTest {
 			System.out.println(key + " -->" + value);
 			if (value > 1) {
 				System.out.println("Occurance of " + key + " is :" + value);
-			}
-			
+			}			
 		}
 		Thread.sleep(2000);
 		driver.close();

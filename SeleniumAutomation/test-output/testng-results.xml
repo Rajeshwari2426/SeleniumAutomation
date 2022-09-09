@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-09T12:43:07 IST" name="Default suite" finished-at="2022-09-09T12:43:13 IST" duration-ms="6137">
+  <suite started-at="2022-09-09T12:55:07 IST" name="Default suite" finished-at="2022-09-09T12:55:30 IST" duration-ms="23306">
     <groups>
     </groups>
-    <test started-at="2022-09-09T12:43:07 IST" name="Default test" finished-at="2022-09-09T12:43:13 IST" duration-ms="6137">
-      <class name="com.CQA.SeleniumAutomation.ListBoxTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.CQA.SeleniumAutomation.ListBoxTest@750e2b97]" started-at="2022-09-09T12:43:07 IST" name="launchBrowser" finished-at="2022-09-09T12:43:10 IST" duration-ms="3561" status="PASS">
+    <test started-at="2022-09-09T12:55:07 IST" name="Default test" finished-at="2022-09-09T12:55:30 IST" duration-ms="23306">
+      <class name="com.CQA.SeleniumAutomation.PopupHandling">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.CQA.SeleniumAutomation.PopupHandling@1349883]" started-at="2022-09-09T12:55:07 IST" name="launchBrowser" finished-at="2022-09-09T12:55:10 IST" duration-ms="3638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="hashMapExample_printtheOcuuranceOfPoori()[pri:0, instance:com.CQA.SeleniumAutomation.ListBoxTest@750e2b97]" started-at="2022-09-09T12:43:10 IST" name="hashMapExample_printtheOcuuranceOfPoori" finished-at="2022-09-09T12:43:13 IST" duration-ms="2428" status="PASS">
+        <test-method signature="windowPopup_Example()[pri:0, instance:com.CQA.SeleniumAutomation.PopupHandling@1349883]" started-at="2022-09-09T12:55:10 IST" name="windowPopup_Example" finished-at="2022-09-09T12:55:30 IST" duration-ms="19592" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hashMapExample_printtheOcuuranceOfPoori -->
-      </class> <!-- com.CQA.SeleniumAutomation.ListBoxTest -->
+        </test-method> <!-- windowPopup_Example -->
+      </class> <!-- com.CQA.SeleniumAutomation.PopupHandling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
