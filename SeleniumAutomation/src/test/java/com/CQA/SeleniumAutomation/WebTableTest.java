@@ -51,14 +51,12 @@ public class WebTableTest {
 		}
 		System.out.println("Total count of numeric values is :" + countNumberValue);
 		System.out.println("Total sum of all the numeric values is :" + sum);
-		// close the browser
 		driver.close();
 	}
 
 	@Test
 	public void autosuggestionEx_GoogleSearch() throws InterruptedException {
 		driver.get("http://www.google.com");
-		// Enter Selenium in google search text box
 		driver.findElement(By.name("q")).sendKeys("selenium");
 		Thread.sleep(2000);
 		List<WebElement> allOptions = driver.findElements(By.xpath("//*[contains(text(),'selenium')]"));

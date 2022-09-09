@@ -5,13 +5,8 @@
     <classes>
       <class name="com.CQA.SeleniumAutomation.ListBoxTest">
         <methods>
-          <include name="printtheDUPLICATEItem_intheList_HashSet"/>
-          <include name="listBoxExample"/>
-          <include name="printUniqueElement_Sorted"/>
           <include name="hashMapExample_printtheOcuuranceOfPoori"/>
-          <include name="printListValues_SortedOrder"/>
           <include name="launchBrowser"/>
-          <include name="printUniqueElementinthelistbox"/>
         </methods>
       </class> <!-- com.CQA.SeleniumAutomation.ListBoxTest -->
     </classes>

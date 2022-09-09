@@ -14,13 +14,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ListBoxTest {
 	public static WebDriver driver;
 
-	@BeforeTest
+	@BeforeMethod
 	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
@@ -44,17 +45,10 @@ public class ListBoxTest {
 		for (WebElement webElement : options) {
 			String text = webElement.getText();
 			System.out.println(text);
-		}
-		// selectByIndex() selects an element based on the Index, here index starts with
-		// 0
-		s.selectByIndex(1);
-		// selectByValue() method selects an element based on its value attribute.
-		s.selectByValue("v");
-		/*
-		 * selectByVisibleText() method selects an element based on the actual text that
-		 * is visible to the user. For instance, if there are multiple POORI present
-		 * inside the listbox , it will select all the POORI elements.
-		 */
+		}		
+		s.selectByIndex(0);		
+		s.selectByValue("v");		
+		//if there are multiple POORI present inside the listbox , it will select all the POORI elements.		 
 		s.selectByVisibleText("POORI");
 		System.out.println("************Print all selected options***********");
 		List<WebElement> allSelectedOptions = s.getAllSelectedOptions();
@@ -89,7 +83,6 @@ public class ListBoxTest {
 
 	@Test
 	public void printListValues_SortedOrder() throws InterruptedException {
-
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -113,7 +106,6 @@ public class ListBoxTest {
 
 	@Test
 	public void printUniqueElementinthelistbox() throws InterruptedException {
-
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -188,11 +180,8 @@ public class ListBoxTest {
 		System.out.println("Number of elements in the list is :" + count1);
 		HashSet<String> allElementText = new HashSet<String>();
 		for (int i = 0; i < count1; i++) {
-			String text = allOptions.get(i).getText();
-			/*
-			 * allElementText.add(text) returns true if the element is not already added,
-			 * and it returns false if the same element is trying to be added twice.
-			 */
+			String text = allOptions.get(i).getText();			
+			 // allElementText.add(text) returns true if the element is not already added, and it returns false if the same element is trying to be added twice.			 
 			if (!allElementText.add(text)) {
 				System.out.println(text + " is the duplicate item in the list box");
 			}
@@ -227,8 +216,9 @@ public class ListBoxTest {
 			if (value > 1) {
 				System.out.println("Occurance of " + key + " is :" + value);
 			}
-			Thread.sleep(2000);
-			driver.close();
+			
 		}
+		Thread.sleep(2000);
+		driver.close();
 	}
 }
