@@ -1,6 +1,7 @@
 package com.CQA.SeleniumAutomation;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class WebTableTest {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.facebook.com");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 	}
 
 	@Test
@@ -58,7 +59,7 @@ public class WebTableTest {
 	public void autosuggestionEx_GoogleSearch() throws InterruptedException {
 		driver.get("http://www.google.com");
 		// Enter Selenium in google search text box
-		driver.findElement(By.id("lst-ib")).sendKeys("selenium");
+		driver.findElement(By.name("q")).sendKeys("selenium");
 		Thread.sleep(2000);
 		List<WebElement> allOptions = driver.findElements(By.xpath("//*[contains(text(),'selenium')]"));
 		int count = allOptions.size();
@@ -73,6 +74,8 @@ public class WebTableTest {
 				option.click();
 				break;
 			}
+			Thread.sleep(2000);
+			driver.close();
 		}
 	}
 

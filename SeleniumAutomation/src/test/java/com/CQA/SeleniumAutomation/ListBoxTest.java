@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,12 +25,13 @@ public class ListBoxTest {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.facebook.com");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		driver.get("file:///C:/Users/rajar/Downloads/RAJESHWARI/ListBox.html");
 	}
 
 	@Test
-	public void listBoxExample() {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+	public void listBoxExample() throws InterruptedException {
+		
 		WebElement list = driver.findElement(By.id("mtr"));
 		// Create an object of Select class and pass the address of list box as an
 		// argument
@@ -45,7 +47,7 @@ public class ListBoxTest {
 		}
 		// selectByIndex() selects an element based on the Index, here index starts with
 		// 0
-		s.selectByIndex(0);
+		s.selectByIndex(1);
 		// selectByValue() method selects an element based on its value attribute.
 		s.selectByValue("v");
 		/*
@@ -81,11 +83,13 @@ public class ListBoxTest {
 			System.out.println(firstSelectedOption2.getText() + " is the first selected item");
 			s.deselectByVisibleText("POORI");
 		}
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 	@Test
 	public void printListValues_SortedOrder() throws InterruptedException {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+		
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -103,11 +107,13 @@ public class ListBoxTest {
 		for (String value : list) {
 			System.out.println(value);
 		}
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 	@Test
 	public void printUniqueElementinthelistbox() throws InterruptedException {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+	
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -121,11 +127,13 @@ public class ListBoxTest {
 			allElements.add(text);
 		}
 		System.out.println(allElements);
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 	@Test
 	public void printUniqueElement_Sorted() throws InterruptedException {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+		
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -139,12 +147,14 @@ public class ListBoxTest {
 			allElements.add(text);
 		}
 		System.out.println(allElements);
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 	@Test
 
 	public void checklisthasDUPLICATEvalues_HashSet() {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+		
 		WebElement listbox = driver.findElement(By.id("mtr"));
 		Select s = new Select(listbox);
 		List<WebElement> allOptions = s.getOptions();
@@ -170,7 +180,7 @@ public class ListBoxTest {
 	@Test
 
 	public void printtheDUPLICATEItem_intheList_HashSet() {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+		
 		WebElement listbox = driver.findElement(By.id("mtr"));
 		Select s = new Select(listbox);
 		List<WebElement> allOptions = s.getOptions();
@@ -194,8 +204,8 @@ public class ListBoxTest {
 	}
 
 	@Test
-	public void hashMapExample_printtheOcuuranceOfPoori() {
-		driver.get("file:///C:/Users/rajar/Documents/ListBox.html");
+	public void hashMapExample_printtheOcuuranceOfPoori() throws InterruptedException {
+		
 		WebElement list = driver.findElement(By.id("mtr"));
 		Select s = new Select(list);
 		List<WebElement> allElements = s.getOptions();
@@ -217,6 +227,8 @@ public class ListBoxTest {
 			if (value > 1) {
 				System.out.println("Occurance of " + key + " is :" + value);
 			}
+			Thread.sleep(2000);
+			driver.close();
 		}
 	}
 }

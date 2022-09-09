@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.FindElements">
+      <class name="com.CQA.SeleniumAutomation.WebTableTest">
         <methods>
-          <include name="totalCheckboxes"/>
           <include name="launchBrowser"/>
+          <include name="autosuggestionEx_GoogleSearch"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.FindElements -->
+      </class> <!-- com.CQA.SeleniumAutomation.WebTableTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
