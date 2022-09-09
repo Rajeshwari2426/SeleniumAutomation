@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.SeleniumAutomation.WebTableTest">
+      <class name="com.CQA.SeleniumAutomation.ListBoxTest">
         <methods>
+          <include name="printtheDUPLICATEItem_intheList_HashSet"/>
+          <include name="listBoxExample"/>
+          <include name="printUniqueElement_Sorted"/>
+          <include name="hashMapExample_printtheOcuuranceOfPoori"/>
+          <include name="printListValues_SortedOrder"/>
           <include name="launchBrowser"/>
-          <include name="autosuggestionEx_GoogleSearch"/>
+          <include name="printUniqueElementinthelistbox"/>
         </methods>
-      </class> <!-- com.CQA.SeleniumAutomation.WebTableTest -->
+      </class> <!-- com.CQA.SeleniumAutomation.ListBoxTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
