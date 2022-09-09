@@ -21,17 +21,17 @@ public class ListBoxTest {
 	public static WebDriver driver;
 
 	@BeforeTest
-public void launchBrowser() {
+	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rajar\\eclipse-workspace\\SeleniumAutomation\\SeleniumAutomation\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-	driver.get("file:///C:/Users/rajar/Downloads/RAJESHWARI/ListBox.html");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("file:///C:/Users/rajar/Downloads/RAJESHWARI/ListBox.html");
 	}
 
 	@Test
 	public void listBoxExample() throws InterruptedException {
-		
+
 		WebElement list = driver.findElement(By.id("mtr"));
 		// Create an object of Select class and pass the address of list box as an
 		// argument
@@ -89,7 +89,7 @@ public void launchBrowser() {
 
 	@Test
 	public void printListValues_SortedOrder() throws InterruptedException {
-		driver.get("file:///C:/Users/rajar/Downloads/RAJESHWARI/ListBox.html");
+
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -113,7 +113,7 @@ public void launchBrowser() {
 
 	@Test
 	public void printUniqueElementinthelistbox() throws InterruptedException {
-	
+
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -133,7 +133,7 @@ public void launchBrowser() {
 
 	@Test
 	public void printUniqueElement_Sorted() throws InterruptedException {
-		
+
 		WebElement listElement = driver.findElement(By.id("mtr"));
 		Select s = new Select(listElement);
 		List<WebElement> allOptions = s.getOptions();
@@ -154,7 +154,7 @@ public void launchBrowser() {
 	@Test
 
 	public void checklisthasDUPLICATEvalues_HashSet() {
-		
+
 		WebElement listbox = driver.findElement(By.id("mtr"));
 		Select s = new Select(listbox);
 		List<WebElement> allOptions = s.getOptions();
@@ -180,7 +180,7 @@ public void launchBrowser() {
 	@Test
 
 	public void printtheDUPLICATEItem_intheList_HashSet() {
-		
+
 		WebElement listbox = driver.findElement(By.id("mtr"));
 		Select s = new Select(listbox);
 		List<WebElement> allOptions = s.getOptions();
@@ -205,7 +205,7 @@ public void launchBrowser() {
 
 	@Test
 	public void hashMapExample_printtheOcuuranceOfPoori() throws InterruptedException {
-		
+
 		WebElement list = driver.findElement(By.id("mtr"));
 		Select s = new Select(list);
 		List<WebElement> allElements = s.getOptions();
