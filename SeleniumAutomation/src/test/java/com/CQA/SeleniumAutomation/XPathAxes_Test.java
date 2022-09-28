@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class XPathAxes {
+public class XPathAxes_Test {
 	public static WebDriver driver;
 
 	@BeforeTest

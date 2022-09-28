@@ -10,7 +10,7 @@ import org.openqa.selenium.support.Color;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class WebElementInterfaceMethods {
+public class WebElementInterfaceMethods_Test {
 	public static WebDriver driver;
 
 	@BeforeTest

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.annotations.Test;
 
-public class Independent_Dependent_Xpath {
+public class Independent_Dependent_Xpath_Test {
 	public static WebDriver driver;
 	@Test
 	public void independent_Dependent_Xpath_Seleniumsite_javaDownload() throws InterruptedException {

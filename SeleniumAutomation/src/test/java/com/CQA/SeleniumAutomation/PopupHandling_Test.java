@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class PopupHandling {
+public class PopupHandling_Test {
 
 	public static WebDriver driver;
 
